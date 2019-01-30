@@ -113,14 +113,7 @@ Generating fake data for python types
     - Named (Country, City, and etc.)
     - Address
 - Special
-    - UUID
-    - bytes
-    - hash
-        - MD5
-        - SHA1
-        - SHA256
-        - ...
-        - etc.
+    - UUIDS
 - Text data
 - Tables
     - ?
