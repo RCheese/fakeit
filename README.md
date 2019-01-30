@@ -4,6 +4,7 @@
 
 ## INSTALL:
 - python setup.py install
+- pip install fakeit
 - pip install git+https://github.com/RCheese/fakeit
 
 ## USAGE:

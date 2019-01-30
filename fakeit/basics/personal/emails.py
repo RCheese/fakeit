@@ -1,7 +1,7 @@
 from random import choice
 
-from ..strings import fake_string
 from ..personal.names import get_name, get_surname
+from ..strings import fake_string
 
 domains = ["google", "youtube", "facebook", "baidu", "wikipedia", "qq", "tmall", "yahoo", "taobao", "amazon", "sohu", "twitter",
            "jd", "live", "vk", "instagram", "weibo", "sina", "login", "360", "reddit", "linkedin", "blogspot", "netflix",
