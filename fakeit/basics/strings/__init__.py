@@ -5,7 +5,7 @@ from string import ascii_letters, digits
 from fakeit.exceptions import EmptyAlphabet, InvalidRange
 
 
-def get_literal(alphabet=ascii_letters + digits):
+def fake_literal(alphabet=ascii_letters + digits):
     if not alphabet:
         raise EmptyAlphabet
     return alphabet[randint(0, len(alphabet) - 1)]
@@ -24,12 +24,12 @@ def fake_string(min_length=0, max_length=16, alphabet=ascii_letters + digits, un
         cache = set()
         result = []
         while len(result) != length:
-            buf = get_literal(alphabet=list((set(alphabet) - cache)))
+            buf = fake_literal(alphabet=list((set(alphabet) - cache)))
             cache.add(buf)
             result.append(buf)
         return "".join(result)
     else:
-        return "".join(get_literal(alphabet=alphabet) for _ in range(length))
+        return "".join(fake_literal(alphabet=alphabet) for _ in range(length))
 
 
 def fake_strings(amount, min_length=0, max_length=16, alphabet=ascii_letters + digits, unique=False, unique_strings=False):

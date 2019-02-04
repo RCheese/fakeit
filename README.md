@@ -32,13 +32,13 @@ Generating fake data for python types
 ### Numerics
 ```python
     >>> from fakeit import numerics
-    >>> numerics.get_complex(1,2,3,4)
+    >>> numerics.fake_complex(1,2,3,4)
     ... (1.2157335093960198+3.17909803327301j)
-    >>> numerics.get_complex(1,2,3,4, round=True)
+    >>> numerics.fake_complex(1,2,3,4, round=True)
     ... (2+4j)
-    >>> numerics.get_int(1 ,20)
+    >>> numerics.fake_int(1 ,20)
     ... 11
-    >>> numerics.get_float(1, 20)
+    >>> numerics.fake_float(1, 20)
     ... 3.448023122876366
 ```
 
@@ -81,21 +81,21 @@ Generating fake data for python types
 ```
 
 ### Personal
-
+``
 ```python
     >>> from fakeit import personal
-    >>> personal.names.get_fullname()
+    >>> personal.names.fake_fullname()
     ... 'Justin Hall'
-    >>> personal.names.get_name()
+    >>> personal.names.fake_name()
     ... 'Johnny'
-    >>> personal.names.get_surname()
+    >>> personal.names.fake_surname()
     ... 'Gill'
     
-    >>> personal.phones.get_international()
+    >>> personal.phones.fake_international()
     ... '+67-910-8211582'
-    >>> personal.phones.get_international(mediator="")
+    >>> personal.phones.fake_international(mediator="")
     ... '+974665503991'
-    >>> get_international(country_code=7, area_code=923)
+    >>> fake_international(country_code=7, area_code=923)
     ... '+7-923-4915850'
     
     >>> personal.emails.fake_email()
@@ -103,7 +103,7 @@ Generating fake data for python types
     >>> personal.emails.fake_enough_email()
     ... 'Henry.Hill@google.cn'
     
-    >>> personal.get_fake_person()
+    >>> personal.fake_person()
     ... <Person Stephen Robertson> (FirstName=Stephen, LastName=Robertson, Email=Stephen.Robertson@whatsapp.net, Phone=+1-990-5674435)
 ```
 

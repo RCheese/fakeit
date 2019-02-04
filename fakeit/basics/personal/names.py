@@ -26,13 +26,13 @@ surnames = ["Smith", "Jones", "Taylor", "Williams", "Brown", "Davies", "Evans", 
             "Atkinson", "Lawson"]
 
 
-def get_name():
+def fake_name():
     return choice(names)
 
 
-def get_surname():
+def fake_surname():
     return choice(surnames)
 
 
-def get_fullname():
+def fake_fullname():
     return choice(names) + " " + choice(surnames)

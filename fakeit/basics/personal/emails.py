@@ -1,6 +1,6 @@
 from random import choice
 
-from ..personal.names import get_name, get_surname
+from ..personal.names import fake_name, fake_surname
 from ..strings import fake_string
 
 domains = ["google", "youtube", "facebook", "baidu", "wikipedia", "qq", "tmall", "yahoo", "taobao", "amazon", "sohu", "twitter",
@@ -25,7 +25,7 @@ def fake_email(addr=None, domain=None, tld=None):
 
 
 def fake_enough_email(addr=None, domain=None, tld=None):
-    addr = addr or f"{get_name()}.{get_surname()}"
+    addr = addr or f"{fake_name()}.{fake_surname()}"
     domain = domain or f"{choice(domains)}"
     tld = tld or f"{choice(tlds)}"
     return f"{addr}@{domain}.{tld}"

@@ -18,9 +18,9 @@ class Person:
         return f"<Person {self.fullname}> (FirstName={self.first_name}, LastName={self.last_name}, Email={self.email}, Phone={self.phone})"
 
 
-def get_fake_person():
-    first_name = names.get_name()
-    last_name = names.get_surname()
+def fake_person():
+    first_name = names.fake_name()
+    last_name = names.fake_surname()
     email = emails.fake_enough_email(addr=f"{first_name}.{last_name}")
-    phone = phones.get_international()
+    phone = phones.fake_international()
     return Person(first_name=first_name, last_name=last_name, email=email, phone=phone)
