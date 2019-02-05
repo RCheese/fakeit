@@ -15,7 +15,7 @@ def fake_string(min_length=0, max_length=16, alphabet=ascii_letters + digits, un
     if max_length < min_length:
         raise InvalidRange
 
-    if max_length > len(alphabet):
+    if (max_length > len(alphabet)) and unique:
         raise InvalidRange
 
     length = randint(min_length, max_length)
