@@ -27,7 +27,7 @@ type_mapping = {
 }
 
 
-def fill_template(template, id=None):
+def fill_template(template, id=None, **kwargs):
     tmpl = deepcopy(template)
     res = {}
     if "id" in tmpl:
@@ -36,7 +36,9 @@ def fill_template(template, id=None):
             id = fake_int(0, 128)
 
     for k, v in tmpl.items():
-        if v.python_type == int:
+        if k in kwargs:
+            res[k] = kwargs[k]
+        elif v.python_type == int:
             res[k] = type_mapping[int](0, 777)
         elif v.python_type == float:
             res[k] = type_mapping[float](0, 777)
