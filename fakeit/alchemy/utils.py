@@ -60,7 +60,7 @@ def fill_template(template, id=None, **kwargs):
 
     for k, v in tmpl.items():
         if k in kwargs:
-            res[k] = kwargs[k]
+            res[k] = kwargs[k]() if callable(kwargs[k]) else kwargs[k]
         elif v.python_type == int:
             res[k] = type_mapping[int](0, 777)
         elif v.python_type == float:
