@@ -68,7 +68,7 @@ def fill_template(template, id=None, **kwargs):
         elif v.python_type == str:
             res[k] = type_mapping[str](max_length=v.length)
         elif v.python_type == bool:
-            res[k] = type_mapping[bool]
+            res[k] = type_mapping[bool]()
         else:
             res[k] = None
 
