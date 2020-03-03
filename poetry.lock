@@ -281,9 +281,15 @@ version = "3.1.0"
 docs = ["sphinx", "jaraco.packaging (>=3.2)", "rst.linker (>=1.9)"]
 testing = ["jaraco.itertools", "func-timeout"]
 
+[extras]
+all = []
+django = []
+pydantic = []
+sqlalchemy = []
+
 [metadata]
-content-hash = "d15aa2d8690f2fec294a75570ff61abfd0297ea3db7f8a5c94a498c8695500b3"
-python-versions = "^3.6"
+content-hash = "2f21913de07e774bcdf9640fd7c7f3cf8753cdc4e5d2ba3145ac7a6c9d0284bc"
+python-versions = ">=3.6"
 
 [metadata.files]
 appdirs = [
