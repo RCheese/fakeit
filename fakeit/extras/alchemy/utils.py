@@ -1,12 +1,11 @@
 from copy import deepcopy
 from functools import wraps
 
+from fakeit.basics.boolean import fake_bool
+from fakeit.basics.numerics import fake_float, fake_int
+from fakeit.basics.strings import fake_string
 from sqlalchemy.ext.declarative import DeclarativeMeta
 from sqlalchemy.sql.schema import Table
-
-from fakeit.basics.numerics import fake_int, fake_float
-from fakeit.basics.strings import fake_string
-from fakeit.basics.boolean import fake_bool
 
 
 def _tableconvert(func):
@@ -42,12 +41,7 @@ def get_basic_template(table):
     return dict((column.name, column.type) for column in table.c if not column.nullable)
 
 
-type_mapping = {
-    str: fake_string,
-    int: fake_int,
-    float: fake_float,
-    bool: fake_bool
-}
+type_mapping = {str: fake_string, int: fake_int, float: fake_float, bool: fake_bool}
 
 
 def fill_template(template, id=None, **kwargs):

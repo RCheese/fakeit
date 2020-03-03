@@ -1,20 +1,9 @@
 from random import choice
 
+from constance.tld import domains, tlds
+
 from ..personal.names import fake_name, fake_surname
 from ..strings import fake_string
-
-domains = ["google", "youtube", "facebook", "baidu", "wikipedia", "qq", "tmall", "yahoo", "taobao", "amazon", "sohu", "twitter",
-           "jd", "live", "vk", "instagram", "weibo", "sina", "login", "360", "reddit", "linkedin", "blogspot", "netflix",
-           "microsoftonline", "pages", "yahoo", "yandex", "mail", "pornhub", "twitch", "porn555", "csdn", "alipay", "google",
-           "microsoft", "aliexpress", "t", "google", "ebay", "bing", "naver", "github", "stackoverflow", "amazon", "livejasmin",
-           "office", "msn", "imdb", "google", "xvideos", "whatsapp", "tribunnews", "wordpress", "googleusercontent", "paypal",
-           "bilibili", "apple", "xhamster", "imgur", "google", "google", "xinhuanet", "google", "adobe", "fandom", "google",
-           "babytree", "pinterest", "fbcdn", "amazon", "dropbox", "tumblr", "exosrv", "hao123", "amazon", "amazon", "amazonaws",
-           "google", "instructure", "speakol", "booking", "zhihu", "tianya", "soso", "google", "thestartmagazine", "detail",
-           "bbc", "salesforce", "pixnet", "aparat", "cnn", "onlinesbi", "force", "rakuten", "bbc", "google", "bodelen",
-           "1cnblogs"]
-
-tlds = ["com", "co.uk", "org", "net", "ru", "eu", "de", "fr", "tv", "cn", "es", "com.tr"]
 
 
 def fake_email(addr=None, domain=None, tld=None):

@@ -1,5 +1,6 @@
 from hashlib import md5, sha1, sha256
-from ..bytes import fake_bytes
+
+from fakeit.basics.bytes import fake_bytes
 
 
 def fake_md5():

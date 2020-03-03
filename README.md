@@ -113,8 +113,6 @@ Generating fake data for python types
     - Position
     - Named (Country, City, and etc.)
     - Address
-- Special
-    - UUIDS
 - Text data
 - Tables
     - ?

@@ -1,6 +1,4 @@
-from . import emails
-from . import names
-from . import phones
+from . import emails, names, phones
 
 
 class Person:

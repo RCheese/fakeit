@@ -1,7 +1,7 @@
 from fakeit.exceptions import AdditionalRequirementError
 
 try:
-    import django
+    pass
 except ModuleNotFoundError as e:
     raise AdditionalRequirementError(e)
 
