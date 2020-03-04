@@ -1,11 +1,13 @@
 from random import randint, uniform
 
 
-def fake_int(min=0, max=256):
+def fake_int(min=0, max=255):
+    "from min to max included <[min; max]>"
     return randint(min, max)
 
 
 def fake_float(min=0, max=1):
+    "from min to max included <[min; max]>"
     return uniform(min, max)
 
 

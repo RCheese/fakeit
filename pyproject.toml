@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "fakeit"
-version = "0.1.8"
+version = "0.1.9"
 description = "Generate fake data"
 authors = ["Ruslan Samoylov <ruslan.v.samoylov@gmail.com>"]
 license = "MIT"
