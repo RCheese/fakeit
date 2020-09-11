@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "fakeit"
-version = "0.1.9"
+version = "0.1.10"
 description = "Generate fake data"
 authors = ["Ruslan Samoylov <ruslan.v.samoylov@gmail.com>"]
 license = "MIT"
@@ -14,17 +14,61 @@ issues = "https://github.com/RCheese/fakeit/issues"
 python = ">=3.6"
 
 [tool.poetry.dev-dependencies]
-black = "^20.8b0"
-isort = "^4.3.21"
-flake8 = "^3.8.1"
-pytest = "^5.4.2"
-toml = "^0.10.0"
+black = "20.8b1"
+pytest = "*"
+isort = "*"
+pre-commit = "*"
+pytest-cov = "^*"
 
 [tool.poetry.extras]
 django = ["django"]
 sqlalchemy = ["sqlalchemy"]
 pydantic = ["pydantic"]
 all = ["sqlalchemy", "django"]
+
+[tool.black]
+line_length = 128
+multi_line_output = 3
+length_sort = true
+target-version = ['py38']
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.eggs
+  | \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | _build
+  | buck-out
+  | build
+  | dist
+  # The following are specific to Black, you probably don't want those.
+  | blib2to3
+  | tests/data
+  | profiling
+)/
+'''
+
+[tool.isort]
+include_trailing_comma = true
+multi_line_output = 3
+line_length = 128
+length_sort = true
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "-ra -s -vv"
+testpaths = [
+    "tests",
+    "test_*",
+]
+python_files = [
+    "tests.py",
+    "test_*.py",
+    "*_tests.py"
+]
 
 [build-system]
 requires = ["poetry>=1.0"]
