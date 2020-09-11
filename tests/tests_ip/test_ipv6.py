@@ -1,6 +1,6 @@
 from ipaddress import IPv6Address
 
-from basics.ip.v6 import fake_ipv6
+from fakeit.basics.ip.v6 import fake_ipv6
 
 
 def test_ipv4():

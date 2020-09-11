@@ -1,4 +1,4 @@
-tlds = {
+tlds = (
     "com",
     "co.uk",
     "org",
@@ -11,8 +11,9 @@ tlds = {
     "cn",
     "es",
     "com.tr",
-}
-domains = {
+)
+
+domains = (
     "google",
     "youtube",
     "facebook",
@@ -97,4 +98,4 @@ domains = {
     "rakuten",
     "bodelen",
     "1cnblogs",
-}
+)

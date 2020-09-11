@@ -1,9 +1,9 @@
 from random import choice
 
-from constance.tld import domains, tlds
+from fakeit.constance.tld import tlds, domains
 
-from ..personal.names import fake_name, fake_surname
 from ..strings import fake_string
+from ..personal.names import fake_name, fake_surname
 
 
 def fake_email(addr=None, domain=None, tld=None):

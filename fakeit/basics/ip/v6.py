@@ -1,6 +1,6 @@
 from ipaddress import IPV6LENGTH, IPv6Address
 
-from basics.numerics import fake_int
+from fakeit.basics.numerics import fake_int
 
 
 def fake_ipv6() -> IPv6Address:

@@ -1,2 +1,2 @@
 __projectname__ = "fakeit"
-__verison__ = "0.1.9"
+__verison__ = "0.1.10"

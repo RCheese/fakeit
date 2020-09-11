@@ -1,7 +1,7 @@
-from ipaddress import IPV4LENGTH, IPv4Address
 from random import choice
+from ipaddress import IPV4LENGTH, IPv4Address
 
-from basics.numerics import fake_int
+from fakeit.basics.numerics import fake_int
 
 
 def fake_ipv4() -> IPv4Address:
